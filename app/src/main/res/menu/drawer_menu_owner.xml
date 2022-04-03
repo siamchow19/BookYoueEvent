@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_owner_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_add_party_center"
+            android:icon="@drawable/ic_add_party_center"
+            android:title="Add Party Center" />
+        <item
+            android:id="@+id/nav_owner_previous_deals"
+            android:icon="@drawable/ic_previous_deals"
+            android:title="Previous Deals" />
+        <item
+            android:id="@+id/nav_edit_party_center"
+            android:icon="@drawable/ic_customize_party_center"
+            android:title="Customize Party Center" />
+        <item
+            android:id="@+id/nav_owner_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+
+    </group>
+
+</menu>
