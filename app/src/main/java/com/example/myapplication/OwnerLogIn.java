@@ -28,6 +28,7 @@ public class OwnerLogIn extends AppCompatActivity {
     private Button OwnerLogInButton;
     private DatabaseReference databaseReference;
     private FirebaseAuth auth;
+    private boolean isOwner = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,7 @@ public class OwnerLogIn extends AppCompatActivity {
                             OwnerInfo ownerInfo = dataSnapshot.getValue(OwnerInfo.class);
 
                             if (email.trim().equals(ownerInfo.getEmail())) {
+                                isOwner = true;
                                 Intent intent = new Intent(getApplicationContext(), OwnerHomePage.class);
                                 intent.putExtra("ownerId", ownerInfo.getOwnerId());
                                 startActivity(intent);
@@ -88,6 +90,24 @@ public class OwnerLogIn extends AppCompatActivity {
 
                     }
                 });
+                if(!isOwner){
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            for(DataSnapshot snapshot1: snapshot.getChildren()){
+                                CustomerInfo customerInfo = snapshot1.getValue(CustomerInfo.class);
+                            if(email.trim().equals(customerInfo.getEmail())){
+
+                            }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                }
 
             }
         });

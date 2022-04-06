@@ -79,9 +79,10 @@ public class OwnerHomePage extends AppCompatActivity implements NavigationView.O
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     AddPartyCenterHelper helper = dataSnapshot.getValue(AddPartyCenterHelper.class);
-                    if(helper.getOwnerId().equals(ownerId)){
+                    if(helper.getOwnerId().equals(ownerId) && helper.getPartyCenterStatus().equals("Pending")){
                         list.add(helper);
-                    }
+                        }
+
                 }
 
                     setOnClickListener();

@@ -86,13 +86,28 @@
         android:layout_margin="5dp">
 
         <TextView
+            android:id="@+id/goto_signup_owner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="Sign up as owner"
-            android:textSize="20sp"
             android:textAlignment="center"
-            android:id="@+id/goto_signup_owner"/>
+            android:textColor="#3913E3"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/goto_signup_customer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Sign up as customer"
+            android:textAlignment="center"
+            android:textColor="#3913E3"
+            android:textSize="18sp" />
 
 
     </LinearLayout>

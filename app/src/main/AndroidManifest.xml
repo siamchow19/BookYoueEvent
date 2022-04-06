@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".CustomerHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".PartyCenterDetail"
             android:exported="false" />
         <activity
